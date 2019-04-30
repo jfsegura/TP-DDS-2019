@@ -1,9 +1,9 @@
 package dominio;
 
-import org.junit.jupiter.api.Test
+import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 
-public class Test {
+public class AtuendoTest {
 
     @BeforeEach
     void init() {
@@ -11,6 +11,10 @@ public class Test {
     }
 
     @Test
+
+    void test_atuendo(){
+
+    }
 
 
 
