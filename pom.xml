@@ -1,7 +1,7 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>TALLER20190406</groupId>
-  <artifactId>TALLER20190406</artifactId>
+  <groupId>TP-DDS-2019</groupId>
+  <artifactId>TP-DDS-2019</artifactId>
   <version>1</version>
   <build>
     <plugins>
