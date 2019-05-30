@@ -1,17 +1,28 @@
 package dominio;
 
+//corregir enum
+enum TipoPrenda{
+    camisa,pantalon,zapatos,remera,buzo;
+}
+
+enum TipoTela{
+    algodon,seda;
+}
+
 public class Prenda {
     private Categoria categoriaPrenda;
-    private String tipoPrenda;
-    private String tipoTela;
+    private TipoPrenda tipoPrenda;
+    private TipoTela tipoTela;
     private String colorPrincipal;
     private String colorSecundario;
+
+
 
     public void  cubreParte(){
 
     }
 
-    public Prenda  (Categoria categoriaPrenda, String tipoPrenda, String tipoTela,String colorPrincipal,String colorSecundario){
+    public Prenda  (Categoria categoriaPrenda, TipoPrenda tipoPrenda, TipoTela tipoTela,String colorPrincipal,String colorSecundario){
         this.categoriaPrenda = categoriaPrenda;
         this.tipoPrenda = tipoPrenda;
         this.tipoTela = tipoTela;
@@ -23,11 +34,11 @@ public class Prenda {
         return  categoriaPrenda;
     }
 
-    public String getTipoPrenda() {
+    public TipoPrenda getTipoPrenda() {
         return tipoPrenda;
     }
 
-    public String getTipoTela() {
+    public TipoTela getTipoTela() {
         return tipoTela;
     }
 

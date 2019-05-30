@@ -7,4 +7,5 @@ import java.util.List;
 public class Guardarropa {
 
     private List<Prenda> guardarropas = new ArrayList<Prenda>();
+
     }
