@@ -1,7 +1,7 @@
 package dominio;
 
 public class Prenda {
-    private String categoriaPrenda;
+    private Categoria categoriaPrenda;
     private String tipoPrenda;
     private String tipoTela;
     private String colorPrincipal;
@@ -11,7 +11,7 @@ public class Prenda {
 
     }
 
-    public Prenda  (String categoriaPrenda, String tipoPrenda, String tipoTela,String colorPrincipal,String colorSecundario){
+    public Prenda  (Categoria categoriaPrenda, String tipoPrenda, String tipoTela,String colorPrincipal,String colorSecundario){
         this.categoriaPrenda = categoriaPrenda;
         this.tipoPrenda = tipoPrenda;
         this.tipoTela = tipoTela;
@@ -19,7 +19,7 @@ public class Prenda {
         this.colorSecundario = colorSecundario;
     }
 
-    public String getCategoriaPrenda(){
+    public Categoria getCategoriaPrenda(){
         return  categoriaPrenda;
     }
 
