@@ -1,6 +1,10 @@
 package dominio;
 
-    public class Guardarropa {
 
-        public Atuendo
+import java.util.ArrayList;
+import java.util.List;
+
+public class Guardarropa {
+
+    private List<Prenda> guardarropas = new ArrayList<Prenda>();
     }
