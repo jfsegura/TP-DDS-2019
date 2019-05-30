@@ -6,6 +6,11 @@ import java.util.List;
 
 public class Guardarropa {
 
-    private List<Prenda> guardarropas = new ArrayList<Prenda>();
+    private List<Prenda> prendas = new ArrayList<Prenda>();
+
+    private void agregaPrenda(Prenda prenda){
+        this.prendas.add(prenda);
 
     }
+
+}
