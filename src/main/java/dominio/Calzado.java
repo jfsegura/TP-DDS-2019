@@ -1,4 +1,4 @@
 package dominio;
 
-public class Calzado {
+public class Calzado implements Categoria {
 }

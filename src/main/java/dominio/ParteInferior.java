@@ -1,4 +1,4 @@
 package dominio;
 
-public class ParteInferior {
+public class ParteInferior implements Categoria {
 }
