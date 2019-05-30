@@ -18,4 +18,24 @@ public class Prenda {
         this.colorPrincipal = colorPrincipal;
         this.colorSecundario = colorSecundario;
     }
+
+    public String getCategoriaPrenda(){
+        return  categoriaPrenda;
+    }
+
+    public String getTipoPrenda() {
+        return tipoPrenda;
+    }
+
+    public String getTipoTela() {
+        return tipoTela;
+    }
+
+    public String getColorPrincipal() {
+        return colorPrincipal;
+    }
+
+    public String getColorSecundario() {
+        return colorSecundario;
+    }
 }
