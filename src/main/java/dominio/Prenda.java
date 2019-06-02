@@ -1,9 +1,5 @@
 package dominio;
 
-//corregir enum
-enum TipoPrenda{
-    camisa,pantalon,zapatos,remera,buzo;
-}
 
 enum TipoTela{
     algodon,seda;
