@@ -1,9 +1,6 @@
 package dominio;
 
 
-enum TipoTela{
-    algodon,seda;
-}
 
 public class Prenda {
     private Categoria categoriaPrenda;
