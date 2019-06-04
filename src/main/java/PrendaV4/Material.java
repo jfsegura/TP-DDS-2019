@@ -1,7 +1,9 @@
 package PrendaV4;
 
 public interface Material {
-    Material crear(Material material);
+
     String getTipoMaterial();
+    Prenda colocarMaterial(Prenda prenda);
+    Boolean condiciones(Prenda prenda);
 
 }

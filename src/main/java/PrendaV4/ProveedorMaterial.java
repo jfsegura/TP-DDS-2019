@@ -3,42 +3,44 @@ package PrendaV4;
 import java.util.ArrayList;
 
 
+
 public class ProveedorMaterial {
 
+    private ArrayList <Material>materiales;//= new HashSet<Material>();
 
+    public ProveedorMaterial(){
+        this.materiales=this.iniciar();
+    }
 
-     private ArrayList <Material>materiales=new ArrayList<Material>();//= new HashSet<Material>();
+    private ArrayList<Material> iniciar(){
 
-    ArrayList<Material> iniciar(){
         Material algodon = new Algodon();
-        materiales.add(algodon);
+        this.materiales.add(algodon);
         return materiales;
     }
 
 
 
-    Material buscar(String _material){
+    private Material buscar(String _material){
 
-        Material buscado=null;
 
-        for(Material elemento:materiales){
-            if(elemento.getTipoMaterial().equals(_material)){
-                buscado=elemento;
-            }
-        }
 
-        return buscado;
+
+
+
+
+
+
+        return  material;
 
     }
 
 
     Prenda agregarMaterial(String tipoMaterial,Prenda prenda){
-
-        this.buscar(tipoMaterial);                                      //buscar en la lista con el tipo de material
-
-
-
-        //material le ordena a la prenda que se ponga ese tipo de material
+        Material material =this.buscar(tipoMaterial);   //buscar en la lista con el tipo de material
+        material.colocarMaterial(prenda);               //material le ordena a la prenda que se ponga ese tipo de material
         return prenda;
     }
 }
+
+

@@ -1,6 +1,8 @@
 package PrendaV4;
 
-public   class MoldePrendasTorso implements Prenda {
+public   abstract class MoldePrendasTorso implements Prenda {
+
+
     private Material tipoMaterial;
 
 
@@ -10,55 +12,12 @@ public   class MoldePrendasTorso implements Prenda {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //MODIFICAR
 
-    public Prenda colorearPrenda( Prenda prenda){
+   // public Prenda colorearPrenda( Prenda prenda){
 
-        return prenda;
-    }
+    //    return prenda;
+   // }
 
 
 }
