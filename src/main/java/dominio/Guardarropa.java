@@ -13,4 +13,10 @@ public class Guardarropa {
 
     }
 
+    public List<Prenda>  obtenerPrendas(){
+        return prendas;
+
+    }
+
+
 }

@@ -11,16 +11,20 @@ public class Prenda {
 
 
 
-    public void  cubreParte(){
-
-    }
-
-    public Prenda  (Categoria categoriaPrenda, TipoPrenda tipoPrenda, TipoTela tipoTela,String colorPrincipal,String colorSecundario){
+    public Prenda(Categoria categoriaPrenda, TipoPrenda tipoPrenda, TipoTela tipoTela,String colorPrincipal,String colorSecundario){
         this.categoriaPrenda = categoriaPrenda;
         this.tipoPrenda = tipoPrenda;
         this.tipoTela = tipoTela;
         this.colorPrincipal = colorPrincipal;
         this.colorSecundario = colorSecundario;
+    }
+
+
+    public Prenda(Categoria categoriaPrenda, TipoPrenda tipoPrenda, TipoTela tipoTela,String colorPrincipal){
+        this.categoriaPrenda = categoriaPrenda;
+        this.tipoPrenda = tipoPrenda;
+        this.tipoTela = tipoTela;
+        this.colorPrincipal = colorPrincipal;
     }
 
     public Categoria getCategoriaPrenda(){
