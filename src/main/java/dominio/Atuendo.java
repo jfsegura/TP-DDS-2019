@@ -15,11 +15,15 @@ public class Atuendo{
 
 
     List<Prenda> cubreParte(Guardarropa guardarropa,Categoria categoria){
+
         List<Prenda> resultPrenda = guardarropa.obtenerPrendas().stream()
-                .filter(v -> v.getCategoriaPrenda().equals(categoria.getCategoria()))
+                .filter(prenda -> prenda.getTipoPrenda().getCategoriaPrenda().equals(categoria))
                 .collect(Collectors.toList());
-        
+
+        return resultPrenda;
     }
+
+
 
 
 }

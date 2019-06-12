@@ -2,36 +2,33 @@ package dominio;
 
 
 
-public class Prenda {
-    private Categoria categoriaPrenda;
+public class Prenda extends Validaciones {
     private TipoPrenda tipoPrenda;
     private TipoTela tipoTela;
-    private String colorPrincipal;
-    private String colorSecundario;
+    private Color colorPrincipal;
+    private Color colorSecundario;
+    private Guardarropa guardarropa;
 
 
 
-    public Prenda(Categoria categoriaPrenda, TipoPrenda tipoPrenda, TipoTela tipoTela,String colorPrincipal,String colorSecundario){
-        this.categoriaPrenda = categoriaPrenda;
+    public Prenda(Guardarropa guardarropa,TipoPrenda tipoPrenda, TipoTela tipoTela,Color colorPrincipal,Color colorSecundario){
+        this.guardarropa = guardarropa;
         this.tipoPrenda = tipoPrenda;
         this.tipoTela = tipoTela;
         this.colorPrincipal = colorPrincipal;
-        this.colorSecundario = colorSecundario;
+        if (verificarCombinacionColores(colorPrincipal,colorSecundario)) {
+            this.colorSecundario = colorSecundario;
+        }
     }
 
 
-    public Prenda(Categoria categoriaPrenda, TipoPrenda tipoPrenda, TipoTela tipoTela,String colorPrincipal){
-        this.categoriaPrenda = categoriaPrenda;
-        this.tipoPrenda = tipoPrenda;
+    public Prenda(TipoPrenda tipoPrenda, TipoTela tipoTela,Color colorPrincipal){
+         this.tipoPrenda = tipoPrenda;
         this.tipoTela = tipoTela;
         this.colorPrincipal = colorPrincipal;
     }
 
-    public Categoria getCategoriaPrenda(){
-        return  categoriaPrenda;
-    }
-
-    public TipoPrenda getTipoPrenda() {
+     public TipoPrenda getTipoPrenda() {
         return tipoPrenda;
     }
 
@@ -39,11 +36,15 @@ public class Prenda {
         return tipoTela;
     }
 
-    public String getColorPrincipal() {
+    public Color getColorPrincipal() {
         return colorPrincipal;
     }
 
-    public String getColorSecundario() {
+    public Color getColorSecundario() {
         return colorSecundario;
+    }
+
+    public Guardarropa getGuardarropa(){
+        return guardarropa;
     }
 }
