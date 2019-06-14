@@ -40,7 +40,7 @@ public class guardarropaTest {
         //creo el usuario
         usuario = new Usuario("Gabriel","Figueroa");
         //creo el guardarropa asociado al usuario
-        placard1 = new Guardarropa("Placard",usuario);
+        placard1 = new Guardarropa("Placard");
 
         //creo las prendas
         casmisaLarga = new Prenda(camisa,seda,rojo);
