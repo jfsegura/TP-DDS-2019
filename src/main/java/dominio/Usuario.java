@@ -22,13 +22,8 @@ public class Usuario {
         return apellido;
     }
 
-    private void agregarGuardarropa(Guardarropa guardarropa){
+    public void agregarGuardarropa(Guardarropa guardarropa){
         this.guardarropas.add(guardarropa);
 
     }
-
-
-
-
-
 }

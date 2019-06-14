@@ -7,13 +7,11 @@ public class Prenda extends Validaciones {
     private TipoTela tipoTela;
     private Color colorPrincipal;
     private Color colorSecundario;
-    private Guardarropa guardarropa;
 
 
 
-    public Prenda(Guardarropa guardarropa,TipoPrenda tipoPrenda, TipoTela tipoTela,Color colorPrincipal,Color colorSecundario){
-        this.guardarropa = guardarropa;
-        this.tipoPrenda = tipoPrenda;
+    public Prenda(TipoPrenda tipoPrenda, TipoTela tipoTela,Color colorPrincipal,Color colorSecundario){
+         this.tipoPrenda = tipoPrenda;
         this.tipoTela = tipoTela;
         this.colorPrincipal = colorPrincipal;
         if (verificarCombinacionColores(colorPrincipal,colorSecundario)) {
@@ -44,7 +42,5 @@ public class Prenda extends Validaciones {
         return colorSecundario;
     }
 
-    public Guardarropa getGuardarropa(){
-        return guardarropa;
-    }
+
 }
