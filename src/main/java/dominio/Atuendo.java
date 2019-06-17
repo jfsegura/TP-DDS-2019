@@ -7,23 +7,25 @@ import java.util.stream.Collectors;
 
 public class Atuendo{
 
-    private List<Prenda> accesorio = new ArrayList<Prenda>();
-    private List<Prenda> calzado = new ArrayList<Prenda>();
-    private List<Prenda> parteInferior = new ArrayList<Prenda>();
-    private List<Prenda> torso = new ArrayList<Prenda>();
-    private java.util.stream.Collectors Collectors;
+    private Prenda accesorio;
+    private Prenda calzado;
+    private Prenda parteInferior;
+    private Prenda parteSuperior;
 
 
-    List<Prenda> cubreParte(Guardarropa guardarropa,Categoria categoria){
+    public Atuendo(Prenda parteSuperior, Prenda accesorio, Prenda parteInferior, Prenda calzado) {
+        this.parteSuperior = parteSuperior;
+        this.parteInferior = parteInferior;
+        this.calzado = calzado;
+        this.accesorio = accesorio;
 
-        List<Prenda> resultPrenda = guardarropa.obtenerPrendas().stream()
-                .filter(prenda -> prenda.getTipoPrenda().getCategoriaPrenda().equals(categoria))
-                .collect(Collectors.toList());
-
-        return resultPrenda;
     }
 
+    public Atuendo(Prenda parteSuperior, Prenda parteInferior, Prenda calzado) {
+        this.parteSuperior = parteSuperior;
+        this.parteInferior = parteInferior;
+        this.calzado = calzado;
 
-
+    }
 
 }

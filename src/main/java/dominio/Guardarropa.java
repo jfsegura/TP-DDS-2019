@@ -3,6 +3,7 @@ package dominio;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Guardarropa {
 
@@ -27,6 +28,15 @@ public class Guardarropa {
         this.prendas.add(prenda);
 
     }
+
+    public List<Prenda> prendaCubreParte(Guardarropa guardarropa, Categoria categoria) {
+
+        return guardarropa.obtenerPrendas().stream()
+                .filter(prenda -> prenda.getTipoPrenda().getCategoriaPrenda().equals(categoria))
+                .collect(Collectors.toList());
+
+    }
+
 
 
 
