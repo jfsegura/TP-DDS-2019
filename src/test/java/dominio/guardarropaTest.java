@@ -10,7 +10,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 
@@ -48,6 +48,7 @@ public class guardarropaTest {
         this.seda = new TipoTela("seda");
         this.algodon = new TipoTela("algodon");
         this.rojo = new Color("rojo");
+
 
         //creo el usuario
         usuario = new Usuario("Gabriel","Figueroa");
@@ -88,10 +89,14 @@ public class guardarropaTest {
 
          */
 
-        Set<List<List<Prenda>>> result = Sets.cartesianProduct(ImmutableList.of(ImmutableSet.of(parteSuperiorUno), ImmutableSet.of(parteInferiorUno)));
+
+        Set<List<Prenda>> result = Sets.cartesianProduct(ImmutableList.of(new HashSet<>(parteSuperiorUno),  new HashSet<>(parteInferiorUno)));
+
         Iterator iter3 = result.iterator();
         while (iter3.hasNext())
             System.out.println(iter3.next());
+
+
 
     }
 
