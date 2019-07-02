@@ -33,11 +33,8 @@ public class REST2 {
             Object obj;
             output = br.readLine();
 
-                 obj = new JSONParser().parse(output);
-      //      JSONObject jo = new JSONObject();
-            JSONArray ja = (JSONArray) obj;
-  //          jo.put("Temperature",ja);
-
+                obj = new JSONParser().parse(output);
+                JSONArray ja = (JSONArray) obj;
                 JSONObject main = (JSONObject) ja.get(0);
                 JSONObject type = (JSONObject) main.get("Temperature");
                 JSONObject unit = (JSONObject) type.get("Metric");
