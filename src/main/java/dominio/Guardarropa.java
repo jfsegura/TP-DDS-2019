@@ -27,7 +27,9 @@ public class Guardarropa {
     }
 
     public void agregarPrendaGuardarropa(Prenda prenda){
-        this.prendas.add(prenda);
+        if (usuario.getTipoUsuario().getMaxPrendaEnGuardarropa() < prendas.size()) {
+            this.prendas.add(prenda);
+        }
 
     }
 

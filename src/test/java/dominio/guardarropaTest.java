@@ -38,6 +38,7 @@ public class guardarropaTest {
     private List<Prenda> parteInferiorUno = new ArrayList<Prenda>();
     private List<Prenda> parteCalzadoUno = new ArrayList<Prenda>();
     private Set<List<Prenda>> atuendos;
+    private TipoDeUsuario tipoUsuario;
 
     @Before
     public void setup() {
@@ -52,10 +53,11 @@ public class guardarropaTest {
         this.seda = new TipoTela("seda");
         this.algodon = new TipoTela("algodon");
         this.rojo = new Color("rojo");
+        this.tipoUsuario = new UsuarioGratuito(13);
 
 
         //creo el usuario
-        usuario = new Usuario("Gabriel","Figueroa");
+        usuario = new Usuario("Gabriel", "Figueroa", tipoUsuario);
         //creo el guardarropa asociado al usuario
         placard1 = new Guardarropa("Placard");
         //creo las prendas
