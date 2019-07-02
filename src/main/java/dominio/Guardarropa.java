@@ -53,6 +53,12 @@ public class Guardarropa {
 
     }
 
+    public Atuendo obtenerSugerencia(Temperatura temperatura){
+
+        //en base a la temperatura que toma de la api se generara la sugerencia de atuendo correspondiente
+
+    }
+
 
 
 
