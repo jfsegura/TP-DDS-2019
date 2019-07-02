@@ -30,11 +30,15 @@ public class guardarropaTest {
     private Prenda camisaCorta;
     private Prenda pantalonGabi;
     private Prenda pantalonGabi2;
+    private Prenda calzadoGabi;
     private TipoTela seda;
     private TipoTela algodon;
     private Color rojo;
     private List<Prenda> parteSuperiorUno = new ArrayList<Prenda>();
     private List<Prenda> parteInferiorUno = new ArrayList<Prenda>();
+    private List<Prenda> parteCalzadoUno = new ArrayList<Prenda>();
+    private Set<List<Prenda>> atuendos;
+
     @Before
     public void setup() {
         this.parteSuperior = new Categoria("superior");
@@ -60,10 +64,11 @@ public class guardarropaTest {
         camisaCorta = new Prenda(camisa, algodon, rojo);
         pantalonGabi = new Prenda(pantalon, algodon, rojo);
         pantalonGabi2 = new Prenda(pantalon, seda, rojo);
+        calzadoGabi = new Prenda(zapato, algodon, rojo);
     }
     @Test
 
-    public void test_tipoPrenda(){
+    public void test_tipoPrenda() {
 
         usuario.agregarGuardarropa(placard1);
 
@@ -72,34 +77,21 @@ public class guardarropaTest {
         placard1.agregarPrendaGuardarropa(camisaCorta);
         placard1.agregarPrendaGuardarropa(pantalonGabi);
         placard1.agregarPrendaGuardarropa(pantalonGabi2);
+        placard1.agregarPrendaGuardarropa(calzadoGabi);
 
 
         Prenda prenda1 = placard1.obtenerPrendas().get(0);
         parteInferiorUno = placard1.prendaCubreParte(placard1, parteInferior);
         parteSuperiorUno = placard1.prendaCubreParte(placard1, parteSuperior);
+        parteCalzadoUno = placard1.prendaCubreParte(placard1, calzado);
 
-        /*
-        Iterator iter = parteSuperiorUno.iterator();
-        while (iter.hasNext())
-            System.out.println(iter.next());
+        atuendos = placard1.devolverPosiblesAtuendos(parteSuperiorUno, parteSuperiorUno, parteCalzadoUno, parteCalzadoUno);
 
-        Iterator iter1 = parteCalzado.iterator();
-        while (iter1.hasNext())
-            System.out.println(iter1.next());
-
-         */
-
-
-        Set<List<Prenda>> result = Sets.cartesianProduct(ImmutableList.of(new HashSet<>(parteSuperiorUno),  new HashSet<>(parteInferiorUno)));
-
-        Iterator iter3 = result.iterator();
-        while (iter3.hasNext())
+        Iterator iter3 = atuendos.iterator();
+        while (iter3.hasNext()) {
             System.out.println(iter3.next());
 
-
+        }
 
     }
-
-
-
 }

@@ -11,8 +11,10 @@ public class Prenda extends Validaciones {
 
 
     public Prenda(TipoPrenda tipoPrenda, TipoTela tipoTela,Color colorPrincipal,Color colorSecundario){
-         this.tipoPrenda = tipoPrenda;
-        this.tipoTela = tipoTela;
+        if (!verificaTipoPrendayTipoTela(tipoPrenda, tipoTela).isEmpty()) {
+            this.tipoPrenda = tipoPrenda;
+            this.tipoTela = tipoTela;
+        }
         this.colorPrincipal = colorPrincipal;
         if (verificarCombinacionColores(colorPrincipal,colorSecundario)) {
             this.colorSecundario = colorSecundario;
